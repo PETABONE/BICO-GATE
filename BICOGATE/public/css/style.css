@@ -1,0 +1,276 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-image:url("../img/BackGround.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin-top:50px; 
+    margin: 20px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
+
+/*Get It*/
+
+#downloadButton {
+
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color:#000;
+    background: #f73050;
+    box-shadow: inset 0px 0px 37px 0px rgba(0,0,0,0.7);
+    width: 200px;
+    padding: 17px 0px;
+    text-align:center;
+    border-radius: 15px;
+    position: absolute;
+    top:0;
+    left:0;
+    border: none; 
+    cursor: pointer; 
+   
+}
+
+
+#countdown { 
+            display: none; 
+            font-size: 24px; 
+            margin-top: 20px;
+            color:#666
+        } 
+
+
+
+
+
+button span{
+    position:relative;
+    width:1.5em;
+    visibility:visible;
+
+}
+
+button span:after{
+    content:'\21D3';
+    font-size: 1.5em;
+    position:absolute;
+    padding-left:10px;
+    animation: down 1s linear
+    infinite;
+}
+
+@keyframes down {
+
+from{
+    top:-10px;
+    opacity: 0;
+
+    }
+to{
+    top:10px;
+    opacity: 1;
+}   
+
+
+ }
+
+
+/* Book */
+.book {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    top: 135px;
+    left: 30;
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+    transition: transform 0.5s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+   }
+
+.front {
+    backface-visibility: hidden;
+    border-left: 7px solid  #410;
+}
+
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7e5d38;
+    padding: 0px;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 37px 0px rgba(0,0,0,0.7);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);   
+    transform-origin: left;
+    transition: transform 0.5s;
+
+  }
+
+
+
+
+.text {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 5px;
+}
+
+p {
+  line-height: 24px;
+}
+
+
+.highlight  { 
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 71px 101px transparent;
+  animation: 1300s grow-highlight linear infinite;
+}
+
+
+
+@keyframes grow-highlight {
+  0% {
+    height: 0px;
+    width: 0px;
+    top: 50%;
+    right: 50%;
+    box-shadow: 0px 0px 71px 101px #dcaa71;
+  }
+  53% {
+    box-shadow: 0px 0px 71px 101px #dcaa71;
+  }
+ 
+}
+
+
+
+
+
+.front {
+    z-index: 1;
+}
+
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.cover-img {
+    width: 350px;
+    height: 1000px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+}
+
+#b1 h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#b1 p {
+    margin-bottom: 20px;
+}
+
