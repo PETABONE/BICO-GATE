@@ -25,6 +25,7 @@ button {
     background-color: transparent;
     margin-top:50px; 
     margin: 20px;
+    cursor: pointer; 
     transition: transform 0.5s;
 }
 
