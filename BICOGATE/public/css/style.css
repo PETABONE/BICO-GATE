@@ -21,7 +21,7 @@ body {
 
 /*Get It*/
 
-#downloadButton {
+/* #downloadButton {
 
     text-decoration: none;
     font-size: 1.5em;
@@ -84,7 +84,7 @@ to{
 
  }
 
-
+*/
 
 /* Button */
 button {
@@ -106,7 +106,7 @@ button:hover i {
 
 i {
     color: gray;
-    font-size: 40em;
+    font-size: 4em;
 }
 
 
