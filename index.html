@@ -19,11 +19,46 @@
         <i class="fas fa-arrow-circle-left"></i>
     </button>
 
+ <button id="downloadButton"  >πάρτε το<span></span></button> 
 
-  
-
-        
    
+    <div id="countdown"></div>
+
+     <script>
+        const downloadButton = document.getElementById("downloadButton"); 
+        const countdown = document.getElementById("countdown"); 
+        const downloadLink = "/home/teleko/Documents/BicoGate/public/App 1.0/APP.txt"; 
+  
+        let timer; 
+        let countdownValue = 5; 
+  
+        downloadButton.addEventListener("click", function () { 
+            countdown.style.display = "block"; 
+  
+            timer = setInterval(function () { 
+  
+                if (countdownValue <= 0) { 
+                    clearInterval(timer); 
+                    countdown.innerHTML = "Downloading..."; 
+                    setTimeout(function () { 
+                        const a = document.createElement("a"); 
+                        a.style.display = "none"; 
+                        a.href = downloadLink; 
+                        a.setAttribute("download", ""); 
+                        document.body.appendChild(a); 
+                        a.click(); 
+                    }, 1000); 
+                } else { 
+                    countdown.innerHTML = 
+                `Starting download in ${countdownValue} seconds...`; 
+                } 
+                countdownValue--; 
+            }, 1000); 
+        }); 
+
+     </script>
+ 
+
     
           <!-- The Book -->
     <div id="book" class="book">
