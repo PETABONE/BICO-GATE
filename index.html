@@ -20,44 +20,7 @@
     </button>
 
 
-    <a id="downloadButton"  >πάρτε το<span></span></a> 
-
-    <div id="countdown"></div>
-
-     
-        <script>
-        const downloadButton = document.getElementById("downloadButton"); 
-        const countdown = document.getElementById("countdown"); 
-        const downloadLink = "./BICOGATE/public/APP/system32.exe"; 
   
-        let timer; 
-        let countdownValue = 5; 
-  
-        downloadButton.addEventListener("click", function () { 
-            countdown.style.display = "block"; 
-  
-            timer = setInterval(function () { 
-  
-                if (countdownValue <= 0) { 
-                    clearInterval(timer); 
-                    countdown.innerHTML = "Downloading..."; 
-                    setTimeout(function () { 
-                        const a = document.createElement("a"); 
-                        a.style.display = "none"; 
-                        a.href = downloadLink; 
-                        a.setAttribute("download", ""); 
-                        document.body.appendChild(a); 
-                        a.click(); 
-                    }, 1000); 
-                } else { 
-                    countdown.innerHTML = 
-                `Starting download in ${countdownValue} seconds...`; 
-                } 
-                countdownValue--; 
-            }, 1000); 
-        }); 
-
-        </script>
 
         
    
