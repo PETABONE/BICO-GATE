@@ -76,14 +76,14 @@ i {
 
 
 
-button span{
+button2 span{
     position:relative;
     width:1.5em;
     visibility:visible;
 
 }
 
-button span:after{
+button2 span:after{
     content:'\21D3';
     font-size: 1.5em;
     position:absolute;
