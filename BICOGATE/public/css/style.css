@@ -53,14 +53,14 @@ body {
 
 
 
-a span{
+button span{
     position:relative;
     width:1.5em;
     visibility:visible;
 
 }
 
-a span:after{
+button span:after{
     content:'\21D3';
     font-size: 1.5em;
     position:absolute;
