@@ -19,29 +19,6 @@ body {
     font-family: sans-serif;
   }
 
-/* Button */
-button {
-    border: none;
-    background-color: transparent;
-    margin-top:50px; 
-    margin: 20px;
-    cursor: pointer; 
-    transition: transform 0.5s;
-}
-
-button:focus {
-    outline: none;
-}
-
-button:hover i {
-    color: rgb(102, 102, 102);
-}
-
-i {
-    color: gray;
-    font-size: 4em;
-}
-
 /*Get It*/
 
 #downloadButton {
@@ -106,6 +83,31 @@ to{
 
 
  }
+
+
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin-top:50px; 
+    margin: 20px;
+    cursor: pointer; 
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
 
 
 /* Book */
