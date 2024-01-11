@@ -17,7 +17,6 @@ let numOfPapers = 3;
 let maxState = numOfPapers + 1;
 
 
-
 function openBook() {
     book.style.transform = "translateX(50%)";
     prevBtn.style.transform = "translateX(-180px)";
